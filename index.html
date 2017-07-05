@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Login Page</title>
+      <link rel="stylesheet" href="css/styles.css" />
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
+   </head>
+   <body class="body-login">
+      <div class="login-form clearfix">
+         <div class="login-form-image">
+            <!--<div class="login-form-copy">
+               <h3>IPS Universitaria</h3>
+               <h5>Subtitulo de la pagina</h5>
+            </div>-->
+         </div>
+
+         <div class="login-authorize-form">
+            <h1>
+               <a href="/">
+                  <img src="http://10.20.65.67:91/Content/img/logo_nuevo.png" class="logo" alt="Logo" />
+               </a>
+            </h1>
+
+            <div class="login-form-inner">
+               <div id="notifier" class="notify-wrap error" style="">
+                  <div class="notify-inner notify-error" data-type="error" data-vivaldi-spatnav-clickable="1">
+                     <span class="btn-icon"><i></i></span>
+                     <p class="notify-text">Nombre de usuario o contraseña incorrecta.</p>
+                  </div>
+               </div>
+               <h3 data-section="login">Login</h3>
+               <form action="/account/login" method="post" data-section="login">
+                  <div class="form-group">
+                     <input type="text" class="form-control input-lg" placeholder="Nombre de Usuario" name="usuario" />
+                  </div>
+                  
+                  <div class="form-group">
+                     <input type="password" class="form-control input-lg" placeholder="Contraseña" name="password" />
+                  </div>
+
+                  <div class="form-group signin-group clearfix">
+                     <button class="btn lg primary raised pull-right" data-action="login">LOGIN</button>
+                     <a class="btn lg primary flat pull-right js-link" data-target="register" href="/account/login?go=register" data-vivaldi-spatnav-clickable="1">REGISTER</a>
+                  </div>
+               </form>
+            </div>
+
+            <div class="login-footer">
+               <a class="btn lg primary flat pull-right js-link" data-target="login" href="/account/login" data-vivaldi-spatnav-clickable="1">
+               </a>
+               <div class="js-link-parent" data-section="login"><a class="btn lg primary flat pull-right js-link" data-target="login" href="/account/login" data-vivaldi-spatnav-clickable="1">
+                  </a><a data-target="forgot" class="js-link" href="/account/login?go=forgot" data-vivaldi-spatnav-clickable="1">¿Se ha olvidado de su contraseña?</a>
+               </div>
+               <div class="js-link-parent" data-section="forgot" style="display:none;">
+                  <a data-target="register" class="js-link" href="/account/login?go=register" data-vivaldi-spatnav-clickable="1">Crear una Cuenta</a>
+               </div>
+               <div class="js-link-parent" data-section="register" style="display:none;">
+                  <a data-target="forgot" class="js-link" href="/account/login?go=forgot" data-vivaldi-spatnav-clickable="1">¿Se ha olvidado de su contraseña?</a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>
