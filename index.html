@@ -1,72 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Login Page</title>
-      <link rel="stylesheet" href="css/styles.css" />
-      <link rel="stylesheet" href="css/bootstrap.min.css" />
-      <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>Login Page</title>
+	  <link rel="stylesheet" href="css/styles.css" />
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
    </head>
+
    <body class="body-login">
-      <div class="login-form clearfix">
-         <div class="login-form-image">
-            <!--<div class="login-form-copy">
-               <h3>IPS Universitaria</h3>
-               <h5>Subtitulo de la pagina</h5>
-            </div>-->
-         </div>
+	  <div class="login-form clearfix">
+		 <div class="login-authorize-form">
+			<h1>
+			   <a href="/">
+				  <img src="http://10.20.65.67:91/Content/img/logo_nuevo.png" class="logo" alt="Logo" />
+			   </a>
+			</h1>
 
-         <div class="login-authorize-form">
-            <h1>
-               <a href="/">
-                  <img src="http://10.20.65.67:91/Content/img/logo_nuevo.png" class="logo" alt="Logo" />
-               </a>
-            </h1>
+			<div class="login-form-inner">
+			   <div class="alert alert-danger alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<strong>
+					<i class="fa fa-warning"></i>
+				</strong>
 
-            <div class="login-form-inner">
-               <div id="notifier" class="notify-wrap error" style="">
-                  <div class="notify-inner notify-error" data-type="error" data-vivaldi-spatnav-clickable="1">
-                     <span class="btn-icon"><i></i></span>
-                     <p class="notify-text">Nombre de usuario o contraseña incorrecta.</p>
-                  </div>
-               </div>
-               <h3 data-section="login">Login</h3>
-               <form action="/account/login" method="post" data-section="login">
-                  <div class="form-group">
-                     <input type="text" class="form-control input-lg" placeholder="Nombre de Usuario" name="usuario" />
-                  </div>
-                  
-                  <div class="form-group">
-                     <input type="password" class="form-control input-lg" placeholder="Contraseña" name="password" />
-                  </div>
+				Se han encontrado errores, las credenciales no son correctas.
+			   </div>
 
-                  <div class="form-group signin-group clearfix">
-                     <button class="btn lg primary raised pull-right" data-action="login">LOGIN</button>
-                     <a class="btn lg primary flat pull-right js-link" data-target="register" href="/account/login?go=register" data-vivaldi-spatnav-clickable="1">REGISTER</a>
-                  </div>
-               </form>
-            </div>
+			   <h2>Iniciar sesión</h2>
+			   <h5>Por favor introduzca las credenciales.</h5>
 
-            <div class="login-footer">
-               <a class="btn lg primary flat pull-right js-link" data-target="login" href="/account/login" data-vivaldi-spatnav-clickable="1">
-               </a>
-               <div class="js-link-parent" data-section="login"><a class="btn lg primary flat pull-right js-link" data-target="login" href="/account/login" data-vivaldi-spatnav-clickable="1">
-                  </a><a data-target="forgot" class="js-link" href="/account/login?go=forgot" data-vivaldi-spatnav-clickable="1">¿Se ha olvidado de su contraseña?</a>
-               </div>
-               <div class="js-link-parent" data-section="forgot" style="display:none;">
-                  <a data-target="register" class="js-link" href="/account/login?go=register" data-vivaldi-spatnav-clickable="1">Crear una Cuenta</a>
-               </div>
-               <div class="js-link-parent" data-section="register" style="display:none;">
-                  <a data-target="forgot" class="js-link" href="/account/login?go=forgot" data-vivaldi-spatnav-clickable="1">¿Se ha olvidado de su contraseña?</a>
-               </div>
-            </div>
-         </div>
-      </div>
+			   <form action="/account/login" method="post">
+				  <div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group">
+							<input type="text" class="form-control input-lg" placeholder="Nombre de Usuario" name="usuario" />
+						</div>
+					</div>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group">
+							<input type="password" class="form-control input-lg" placeholder="Contraseña" name="password" />
+						</div>
+					</div>
+				  </div>
+
+				  <div class="form-group pull-right">
+					 <button type="submit" class="btn btn-primary">
+						<i class="fa fa-sign-in"></i> Iniciar sesión
+					 </button>
+				  </div>
+
+				  <div class="clearfix"></div>
+			   </form>
+			</div>
+
+			<div class="login-footer">
+				<div class="row">
+					<div class="col-xs-12 col-md-5">
+						<ul class="social-list text-sm-center">
+							<li>
+								<a href="https://www.ipsuniversitaria.com.co/es/" target="_blank" data-toggle="tooltip" title="IPS Universitaria">
+									<i class="fa fa-hospital-o"></i>
+								</a>
+							</li>
+
+							<li>
+								<a href="https://www.facebook.com/IPSUNIVERSITARIA" target="_blank" data-toggle="tooltip" title="Facebook">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+
+							<li>
+								<a href="https://twitter.com/IPSUDEA" target="_blank" data-toggle="tooltip" title="Twitter">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</li>
+
+							<li>
+								<a href="https://youtube.com/user/IPSUNIVERSITARIA" target="_blank" data-toggle="tooltip" title="Youtube">
+									<i class="fa fa-youtube-play"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-xs-12 col-md-7">
+						<p class="copyright text-sm-center">Copyright © IPS Universitaria 2017</p>
+					</div>
+				</div>
+			</div>
+		 </div>
+
+		 <div class="login-form-image">
+			<!--<div class="login-form-copy">
+			   <h3>IPS Universitaria</h3>
+			   <h5>Subtitulo de la pagina</h5>
+			</div>-->
+		 </div>
+	  </div>
+
+	  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	  
+	  <script type="text/javascript">
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip();
+		})
+	  </script>
    </body>
 </html>
