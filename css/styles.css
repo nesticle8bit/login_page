@@ -148,7 +148,7 @@ body {
     right: 0;
     /*background-color: #0098db;*/
     display: none;
-    background-image: url(https://puu.sh/wCfQC/e41ed77629.jpg); /*,linear-gradient(to bottom right,#49c3c9,#249bd6 50%,#0c5b9c);*/
+    background-image: url(../img/bg-login.jpg); /*,linear-gradient(to bottom right,#49c3c9,#249bd6 50%,#0c5b9c);*/
     background-repeat: no-repeat;
     background-size: 100vh auto;
     background-position: 100% 100%,0 0;
